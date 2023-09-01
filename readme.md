@@ -6,6 +6,7 @@ A simple Google Chrome "To-do list" extension made as a passion project by me!
 
 ### How to set up
 Step 1) Download project files from the GitHub repository\
+\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a) Manual Download:\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i) Click on the green "Code" button at the top right of the GitHub respository\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ii) Click "Download Zip"\
@@ -15,6 +16,7 @@ Step 1) Download project files from the GitHub repository\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ii)  Open a terminal and navigate to where you want the folder to be located\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iii) Type `https://github.com/MunirAwwad/To-Do-List-Extension.git` into the terminal\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _A folder should have been created in the directory where you cloned the repository_ \
+\
 Step 2) Open Google Chrome and type `chrome://extensions/` into the URL bar.\
 Step 3) Turn on "developer mode" on the top right of the screen.\
 Step 4) Click on "load unpacked" and select the (unzipped) folder from your machine.\
