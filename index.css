@@ -1,0 +1,170 @@
+/*CSS RESET*/
+* {
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*VARIABLES*/
+:root {
+    --THEME-COLOR : aliceblue;
+    --THEME-COLOR-HOVER : lightskyblue;
+    --THEME-COLOR-ACTIVE : cornflowerblue;
+    --THEME-BG : url(pics/backgrounds/BG2.png);
+    --LI-HOVER : rgba(255, 255, 255, 0.15);
+    --TEXT-COLOR : whitesmoke;
+    --FONT-STACK : Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 300px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding-left: 5%;
+    padding-top : 5%;
+    background-image: var(--THEME-BG);
+    background-size: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img-container {
+    height: 32.5px;
+    width: 32.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -6.5px;
+    right: -15px;
+    border: solid 2px;
+    border-radius: 5rem;
+    padding: 1.25rem;
+    background-color: var(--THEME-COLOR);
+}
+
+header img {
+    height: 30px;
+    width: 30px;
+    user-select: none;
+}
+
+#img-container:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.05s;
+    transition-timing-function: linear;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: var(--FONT-STACK);
+    border: solid 2px;
+    padding : 0.675rem;
+    margin-bottom: 15px; 
+    border-radius: 1.25rem;
+    background-color: var(--THEME-COLOR);
+}
+
+ul {
+    width: 85%;
+}
+
+li {
+    margin-left: 1rem;
+    list-style-type: none;
+    color: var(--TEXT-COLOR);
+    font-weight: 500;
+}
+
+li:last-child {
+    margin-bottom: 15px;
+}
+
+li:hover {
+    background-color: var(--LI-HOVER);
+    border-radius: 10px;
+}
+
+#status {
+    position: relative;
+    top : 2.5px;
+    left: 3px;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#delete-button {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    top: -1.5px;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    display: none;
+}
+
+li p {
+    font-size: 1.25rem;
+    font-family: var(--FONT-STACK);
+    text-shadow: 0px 0px 0.5px black;
+    display: inline;
+}
+
+input {
+    font-family: var(--FONT-STACK);
+    text-align: left;
+    border: solid 2px black;
+    padding: 0.625rem;
+    border-radius: 1.125rem;
+    margin-bottom: 7.5px;
+    font-size: 1.25rem;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem;
+    border: solid 2px black;
+    border-radius: 0.85rem;
+    background-color: var(--THEME-COLOR);
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+}
+
+button:hover {
+    background-color: var(--THEME-COLOR-HOVER);
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+
+button:active {
+    background-color: var(--THEME-COLOR-ACTIVE);
+}
+
+#errors {
+    color: red;
+    font-family: var(--FONT-STACK);
+    font-size: 1rem;
+    margin-bottom: 7.5px;
+    text-indent: 6px;
+}
