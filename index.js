@@ -57,6 +57,27 @@ function displayList() {
             allListItems[j].querySelector("#delete-button").style.display = "none";
         })
     }
+    let n = items.length;
+    let nDone = 0;
+    let nDoing = 0;
+    let nToDo = 0;
+    items.forEach(function (item) {
+        if (item[1] == "done") {
+            nDone++;
+        } else if (item[1] == "doing") {
+            nDoing++;
+        } else if (item[1] == "todo") {
+            nToDo++;
+        } else {
+            console.log("Error calculating progress");
+        }
+    });
+    document.querySelector("#doneNum").textContent = `${String(nDone)}`;
+    document.querySelector("#doingNum").textContent = `${String(nDoing)}`;
+    document.querySelector("#toDoNum").textContent = `${String(nToDo)}`;
+    document.querySelector("#donePercent").textContent = `(${n != 0 ? String((nDone/n).toFixed(2) * 100) : 0}%)`;
+    document.querySelector("#doingPercent").textContent = `(${n != 0 ? String((nDoing/n).toFixed(2) * 100) : 0}%)`;
+    document.querySelector("#toDoPercent").textContent = `(${n != 0 ? String((nToDo/n).toFixed(2) * 100) : 0}%)`;
 }
 
 displayList();
@@ -122,11 +143,11 @@ function change (e) {
     }
 }
 
-let themeButton = document.querySelector("#img-container");
+let themeButton = document.querySelector("#theme-button-container");
 let root = document.querySelector(":root");
 let theme = null;
 if (localStorage.getItem("theme") == null) {
-    theme = 0;
+    theme = 1;
     localStorage.setItem("theme", JSON.stringify(theme));
 } else {
     theme = JSON.parse(localStorage.getItem("theme"));
@@ -135,51 +156,77 @@ if (localStorage.getItem("theme") == null) {
 function displayTheme (theme) {
     switch (theme) {
         case 1: 
-            root.style.setProperty("--THEME-BG","url(pics/backgrounds/BG3.png)");
-            root.style.setProperty("--THEME-COLOR", "#FFB6C1");
-            root.style.setProperty("--THEME-COLOR-HOVER","#F08080");
-            root.style.setProperty("--THEME-COLOR-ACTIVE","#FF6767");
-            root.style.setProperty("--LI-HOVER","rgba(255, 255, 255, 0.15)");
-            root.style.setProperty("--TEXT-COLOR", "whitesmoke");
-            document.querySelector("header img").setAttribute("src","pics/icons/themeb.png");
-            break;
-        case 2: 
-            root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG1.png)");
-            root.style.setProperty("--THEME-COLOR", "peachpuff");
-            root.style.setProperty("--THEME-COLOR-HOVER","rgb(255, 194, 141)");
-            root.style.setProperty("--THEME-COLOR-ACTIVE","rgb(255, 166, 88)");
-            root.style.setProperty("--LI-HOVER","rgba(128, 128, 128, 0.15)");
-            root.style.setProperty("--TEXT-COLOR", "black");
-            document.querySelector("header img").setAttribute("src","pics/Icons/themeb.png");
-            break;
-        default:
             root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG2.png)");
             root.style.setProperty("--THEME-COLOR", "aliceblue");
             root.style.setProperty("--THEME-COLOR-HOVER","lightskyblue");
-            root.style.setProperty("--THEME-COLOR-ACTIVE","cornflowerblue");
             root.style.setProperty("--LI-HOVER","rgba(255, 255, 255, 0.15)");
             root.style.setProperty("--TEXT-COLOR", "whitesmoke");
-            document.querySelector("header img").setAttribute("src","pics/Icons/themeb.png");
+            break;
+        case 2: 
+            root.style.setProperty("--THEME-BG","url(pics/backgrounds/BG3.png)");
+            root.style.setProperty("--THEME-COLOR", "#FFB6C1");
+            root.style.setProperty("--THEME-COLOR-HOVER","#F08080");
+            root.style.setProperty("--LI-HOVER","rgba(255, 255, 255, 0.15)");
+            root.style.setProperty("--TEXT-COLOR", "whitesmoke");
+            break;
+        case 3:
+            root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG4.png)");
+            root.style.setProperty("--THEME-COLOR", "rgb(200,200,200)");
+            root.style.setProperty("--THEME-COLOR-HOVER","rgb(100,100,100)");
+            root.style.setProperty("--LI-HOVER","rgba(255, 255, 255, 0.15)");
+            root.style.setProperty("--TEXT-COLOR", "whitesmoke");
+            break;
+        case 4:
+            root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG5.jpg)");
+            root.style.setProperty("--THEME-COLOR", "#FFC45F");
+            root.style.setProperty("--THEME-COLOR-HOVER","#FFB40F");
+            root.style.setProperty("--LI-HOVER","rgba(128, 128, 128, 0.15)");
+            root.style.setProperty("--TEXT-COLOR", "black");  
+            break;
+        case 5:
+            root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG1.png)");
+            root.style.setProperty("--THEME-COLOR", "peachpuff");
+            root.style.setProperty("--THEME-COLOR-HOVER","rgb(255, 194, 141)");
+            root.style.setProperty("--LI-HOVER","rgba(128, 128, 128, 0.15)");
+            root.style.setProperty("--TEXT-COLOR", "black");     
+            break;
+        default:
+            console.log("Error selecting theme");
     }
 }
 
 displayTheme(theme);
 
 themeButton.addEventListener("click", function () {
-    switch (theme) {
-        case 1: 
-            theme += 1;
-            localStorage.setItem("theme", JSON.stringify(theme));
-            displayTheme(theme);
-            break;
-        case 2:
-            theme = 0;
-            localStorage.setItem("theme", JSON.stringify(theme));
-            displayTheme(theme);
-            break;
-        default:
-            theme += 1;
-            localStorage.setItem("theme", JSON.stringify(theme));
-            displayTheme(theme);
+    theme++;
+    if (theme <=5) {
+        localStorage.setItem("theme", JSON.stringify(theme));
+        displayTheme(theme);
+    } else {
+        theme = 1;
+        localStorage.setItem("theme", JSON.stringify(theme));
+        displayTheme(theme);
+    }
+});
+
+let progressButtonContainer = document.getElementById("progress-button-container");
+let progressOverlay =  document.getElementById("progress-overlay");
+let progressOpen = false;
+
+progressButtonContainer.addEventListener("click", function () {
+    if (progressOpen == false) {
+        progressOverlay.style.display = "flex";
+        progressOpen = true;
+    } else {
+        progressOverlay.style.display = "none";
+        progressOpen = false;
+    }
+});
+
+let inputBar = document.querySelector("input");
+
+inputBar.addEventListener("keypress", function (event) {
+    if (event.key == "Enter") {
+        addButton.click();
     }
 });

@@ -8,12 +8,54 @@
         <div id="container">
             <header>
                 <h1>To-Do List</h1>
-                <div id="img-container">
-                    <img id ="theme-button" src="pics/icons/themeb.png" alt="Theme" height="25px" width="25px">
+                <div id="imgs-container">
+                    <div class="img-container" id ="theme-button-container">
+                        <img id ="theme-button" src="pics/icons/themeb.png" alt="Theme" height="30px" width="30px">
+                    </div>
+                    <div class="img-container" id="progress-button-container">
+                        <img id="progress-button" src="pics/icons/progressB.png" alt="Theme" height="25px" width="25px">
+                    </div>  
                 </div>
             </header>
+            <div id="progress-overlay" style="display: none;">
+                <div id="progress">
+                    <div class="progressCol">
+                        <div id="doneCol">
+                            
+                        </div>
+                        <div id="doneNum">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                        <div id="donePercent">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                    </div>
+                    <div class="progressCol">
+                        <div id="doingCol">
+                            
+                        </div>
+                        <div id="doingNum">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                        <div id="doingPercent">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                    </div>
+                    <div class="progressCol">
+                        <div id="toDoCol">
+
+                        </div>
+                        <div id="toDoNum">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                        <div id="toDoPercent">
+                            <!-- CALCULATIONS INSERTED IN JAVASCRIPT -->
+                        </div>
+                    </div>
+</div>
+            </div>
             <ul id="list">
-                <!-- List items get inserted here -->
+                <!-- LIST ITEMS INSERTED IN JAVASCRIPT -->
             </ul>
             <footer>
                 <input type="text" placeholder="Add item" id="field">
