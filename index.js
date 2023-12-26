@@ -181,7 +181,7 @@ function displayTheme (theme) {
             root.style.setProperty("--THEME-COLOR", "#FFC45F");
             root.style.setProperty("--THEME-COLOR-HOVER","#FFB40F");
             root.style.setProperty("--LI-HOVER","rgba(128, 128, 128, 0.15)");
-            root.style.setProperty("--TEXT-COLOR", "black");  
+            root.style.setProperty("--TEXT-COLOR", "whitesmoke");  
             break;
         case 5:
             root.style.setProperty("--THEME-BG","url(pics/Backgrounds/BG1.png)");
