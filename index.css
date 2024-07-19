@@ -82,7 +82,7 @@ header {
 
 #progress-overlay {
     height: 75px;
-    width: 150px;
+    width: auto;
     z-index: 2;
     position: absolute;
     top : 50px;
