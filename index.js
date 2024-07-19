@@ -75,9 +75,9 @@ function displayList() {
     document.querySelector("#doneNum").textContent = `${String(nDone)}`;
     document.querySelector("#doingNum").textContent = `${String(nDoing)}`;
     document.querySelector("#toDoNum").textContent = `${String(nToDo)}`;
-    document.querySelector("#donePercent").textContent = `(${n != 0 ? String(Math.round((nDone/n)*1000) / 10) : 0}%)`;
-    document.querySelector("#doingPercent").textContent = `(${n != 0 ? String(Math.round((nDoing/n)*1000) / 10) : 0}%)`;
-    document.querySelector("#toDoPercent").textContent = `(${n != 0 ? String(Math.round((nToDo/n)*1000) / 10) : 0}%)`;
+    document.querySelector("#donePercent").textContent = `(${n != 0 ? String(Math.round((nDone/n)*100)) : 0}%)`;
+    document.querySelector("#doingPercent").textContent = `(${n != 0 ? String(Math.round((nDoing/n)*100)) : 0}%)`;
+    document.querySelector("#toDoPercent").textContent = `(${n != 0 ? String(Math.round((nToDo/n)*100)) : 0}%)`;
 }
 
 displayList();
