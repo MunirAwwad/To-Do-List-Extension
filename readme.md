@@ -19,7 +19,7 @@ Step 1) Download project files from the GitHub repository\
 \
 Step 2) Open Google Chrome and type `chrome://extensions/` into the URL bar.\
 Step 3) Turn on "developer mode" on the top right of the screen.\
-Step 4) Click on "load unpacked" and select the (unzipped) folder from your machine.\
+Step 4) Click on "load unpacked" and select the (unzipped) folder from your machine.
 
 _*Important note: Since this is a local extension, DO NOT DELETE the (unzipped) folder from your machine as long as you want the extension to work._
 ### How to use
