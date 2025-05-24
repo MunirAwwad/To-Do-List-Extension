@@ -1,8 +1,9 @@
-# To-do List Extension
-## _A project by Munir Awwad_
-### _Version 1.0.0_
+# To-do List Extension for Google Chrome
+## By: Munir Awwad
 ### Description
-A simple Google Chrome "To-do list" extension made as a passion project by me!
+A Google Chrome extension to help users manage tasks and track task progress from within the browser. 
+
+Built with HTML, CSS, and JavaScript.
 
 ### How to set up
 Step 1) Download project files from the GitHub repository\
@@ -14,7 +15,7 @@ Step 1) Download project files from the GitHub repository\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b) Using terminal Git:\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i) Install Git on your machine if its not already installed\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ii)  Open a terminal and navigate to where you want the folder to be located\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iii) Type `https://github.com/MunirAwwad/To-Do-List-Extension.git` into the terminal\
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; iii) Type `git clone https://github.com/MunirAwwad/To-Do-List-Extension.git` into the terminal\
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _A folder should have been created in the directory where you cloned the repository_ \
 \
 Step 2) Open Google Chrome and type `chrome://extensions/` into the URL bar.\
